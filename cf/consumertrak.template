@@ -202,7 +202,6 @@
         "launchconfig": {
             "Type": "AWS::AutoScaling::LaunchConfiguration",
             "Properties": {
-                "KeyName": "jeremyaws",
                 "ImageId": "ami-07eb707f",
                 "InstanceType": "t2.micro",
                 "UserData": {
