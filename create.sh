@@ -18,7 +18,7 @@ echo "Building cloudformation stack..."
 aws cloudformation create-stack --region us-west-2 --stack-name ct-stack-$RANDO --template-body file://cf/consumertrak.template &> /dev/null
 sleep 5s
 # This is a hack but it works for this manual scenario
-# This stack takes about 200 seconds to build so lets wait for that then keep trying to get the lb DNS
+# This stack takes about 4 minutes to build so lets wait for that then keep trying to get the lb DNS
 echo "Waiting for stack to complete..."
 x=8
 while [ $x -gt 0 ]
