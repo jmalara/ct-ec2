@@ -1,4 +1,4 @@
-# Serverless example for CT
+# EC2 Cluster example for CT
 This code deploys an sample ec2 server stack based on your requirements.  Tagging could be better and multi-region support in the CF isn't there, but you get the idea.
 
 # Requirements
