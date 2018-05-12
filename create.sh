@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Way too simple serverless stack builder, ideally this would be called with Jenkins, CodeDeploy, etc but we'll use HumanCD here
+# Cheap random number for stack name
 RANDO=$(awk -v min=1000 -v max=9999 'BEGIN{srand(); print int(min+rand()*(max-min+1))}')
 
 # Checking for AWS CLI
@@ -20,7 +20,7 @@ sleep 5s
 # This is a hack but it works for this manual scenario
 # This stack takes about 200 seconds to build so lets wait for that then keep trying to get the lb DNS
 echo "Waiting for stack to complete..."
-x=7
+x=8
 while [ $x -gt 0 ]
 do
     sleep 30s
