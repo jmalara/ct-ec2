@@ -36,7 +36,7 @@ do
     if [ $? == 0 ]; then
         # OK Stack is finally complete
         URL=$(aws cloudformation --region us-west-2 describe-stacks --stack-name ct-stack-$RANDO | grep 'OutputValue' |  sed "s/\"//g" | sed "s/,//g" |  awk '{print "http://"$2}')
-        printf "\nYou can access the website at the URL below\n"
+        printf "\\nYou can access the website at the URL below\\n"
         echo $URL
         exit 0
     fi
