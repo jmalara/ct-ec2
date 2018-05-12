@@ -28,7 +28,7 @@ do
     x=$(( $x - 1 ))
 done
 
-# OK Stack should be ready now, lets try and get that lb DNS
+#  Stack should be ready now, lets try and get that lb DNS
 x=20
 while [ $x -gt 0 ]
 do
