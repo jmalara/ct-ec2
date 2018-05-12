@@ -13,7 +13,7 @@ if [ $? == 0 ]; then
    exit 1
 fi
 
-echo "Building cloudformation stack, this takes around 3 minutes..."
+echo "Building cloudformation stack, this takes around 4 minutes..."
 # Deploy stack
 aws cloudformation create-stack --region us-west-2 --stack-name ct-stack-$RANDO --template-body file://cf/consumertrak.template &> /dev/null
 sleep 5s

@@ -550,7 +550,7 @@
                 "HealthCheckIntervalSeconds": 30,
                 "HealthCheckProtocol": "HTTP",
                 "HealthCheckTimeoutSeconds": 10,
-                "HealthyThresholdCount": 1,
+                "HealthyThresholdCount": 2,
                 "Matcher": {
                     "HttpCode": "200"
                 },
