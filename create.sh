@@ -13,13 +13,13 @@ if [ $? == 0 ]; then
    exit 1
 fi
 
-echo "Building cloudformation stack..."
+echo "Building cloudformation stack, this takes around 3 minutes..."
 # Deploy stack
 aws cloudformation create-stack --region us-west-2 --stack-name ct-stack-$RANDO --template-body file://cf/consumertrak.template &> /dev/null
 sleep 5s
 # This is a hack but it works for this manual scenario
 # This stack takes about 4 minutes to build so lets wait for that then keep trying to get the lb DNS
-echo "Waiting for stack to complete..."
+echo "Waiting for stack to complete.."
 x=8
 while [ $x -gt 0 ]
 do
